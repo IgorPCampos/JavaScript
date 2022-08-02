@@ -1,0 +1,5 @@
+// Operadores Aritiméticos(matematicos) (+ ,- ,* ,/ ,**) (//Decremento(--) e incremento (++))
+// Operadores Atribuição (O = tem o sentido de receber, +=, -=)
+// Operadores de Comparação (==, ===) 
+// Operadores ternários ( pontos > 100 ? 'premium' : 'comum')
+// Operadores Lógicos (&&, ||, !)

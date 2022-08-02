@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <p id="txt"> Curso de JavaScript curso aula 46</p>
+
+    <script>
+        var texto=document.getElementById('txt').innerHTML
+        var res=texto.match(/\d/ig)
+        // i g m d entre outros está tudo no discord
+        // [^] elimina as letra escritas
+        // [mostra as letras escritas]
+        // [A-E] mostra todas as letras entre A e E
+        document.write(`encontrou ${res.length}: ${res} <br>`)
+        document.write(res[0])
+    </script>
+</body>
+</html>

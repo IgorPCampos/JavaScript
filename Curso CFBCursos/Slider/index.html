@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+</head>
+<style>
+    #slider{
+        width: 1000px;
+        height: 300px;
+        border: 1px solid black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: blue;
+    }
+    .btSlider{
+        background-color: rgba(0, 0, 0, 0.4);
+        height: 30%;
+        color: #fff;
+        cursor: pointer;
+        outline: none;
+        margin: 10px;
+        border: none;
+    }
+    #dvload{
+        width: 100%;
+        height: 5px;
+        margin-top: 25%;
+        border: 1px solid rgba(255,255, 255,0.5);    
+        }
+    #dvbarra{
+        width: 0%;
+        height: 100%;
+        background-color: white;
+    }
+</style>
+<script>
+    var imgs=[],slider,imgAtual,maxImg,tmp,tempoTroca,vtempo,vbarra
+
+
+    function preCarregamento(){
+        var s=1
+        for(var i=0;i<5;i++){
+            imgs=[0]=new Image()
+            imgs[0].src='img/s'+s+'.jpg'
+            s++
+        }
+    }
+    function carregarImg(img){
+        slider.style.backgroundImage=url(+imgs[img].src)
+
+    }
+    function inicia(){
+        preCarregamento()
+        imgAtual=0
+        maxImg=imgs.length-1
+        slider=document.getElementById('slider')
+        vbarra=document.getElementById('dvbarra')
+        carregarImg(imgAtual)
+        tempoTroca=0
+        anima()
+    }
+
+    function troca(dir){
+        tempoTroca=0
+        imgAtual+=dir
+        if(imgAtual>maxImg){
+            imgAtual=0
+        }else if(imgAtual<0){
+            imgAtual=maxImg
+        }
+        carregarImg(imgAtual)
+    }
+
+    function anima(){
+        tempoTroca++
+        if(tempoTroca>=500){
+            tempoTroca=0
+            troca(1)
+        }
+        vtempo=tempoTroca/5
+        vbarra.style.width=vtempo+'%'
+        window.requestAnimationFrame(anima)
+    }
+
+
+    window.addEventListener('load',inicia)
+
+
+</script>
+<body>
+    <div id="slider"> 
+        <button class="btSlider" onclick="troca(-1)">Anterior</button>
+        <div id="dvload" >
+            <div id="dvbarra"></div>
+        </div>
+        <button class="btSlider" onclick="troca(1)">Próximo</button>
+    </div>
+</body>
+</html>

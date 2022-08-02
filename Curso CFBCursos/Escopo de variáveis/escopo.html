@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escopo de variáveis</title>
+
+    <script>
+        var nomeCor='Vermelho'
+
+    function cor(){
+        var nomeCor='Azul'
+        document.write(nomeCor+'<br>'+ this.nomeCor)
+        // O this refere-se a variavel que está no escopo raiz
+    }
+    cor()
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

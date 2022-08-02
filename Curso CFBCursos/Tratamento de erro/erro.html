@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num //máximo 10
+        try {
+            num = prompt('Digite um número')
+            if(num>10){
+                throw new Error('Valor inválido ')
+            }
+            document.write(`Valor ${num}`)
+        } catch (e) {
+            document.write(`Erro ` + e.message)
+        } finally{ //Executa independente se der erro ou não
+            document.write(`<br> Fim do tratamento`)
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

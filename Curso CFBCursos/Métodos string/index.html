@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <p id="txt">Curso de JavaScript curso aula 46</p>
+
+    <script>
+        /* O search mostra a posicão do elemento 
+        var texto=document.getElementById('txt').innerHTML
+        var res=texto.search(/curso/i)
+       
+        document.write(res)
+        */
+
+
+
+        /* O replace muda a palavra escolhida por outra
+        var texto=document.getElementById('txt').innerHTML
+        var res=texto.replace(/curso/i,'aula')
+       
+        document.write(res)
+        */
+       
+
+
+        /* O charAt tem que indicar a posição do elemento e vai mostra qual é ele 
+        var texto=document.getElementById('txt').innerHTML
+        var res=texto.charAt(2)
+       
+        document.write(res)
+        */
+
+
+
+        /* Retorna o código da letra digitada
+        var texto=document.getElementById('txt').innerHTML
+        var res=texto.charCodeAt(0)
+       
+        document.write(res)
+        */
+
+
+        // Retorna a letra de acordo com o código document.write(String.fromCharCode(res))
+
+
+
+        /*
+        var texto=document.getElementById('txt').innerHTML
+        var txt2= 'curso aula 46'
+
+        var res=texto.concat(txt2)
+       
+        document.write(res)
+        */
+
+
+        
+        /* Mostra a posição da letra digitada, mas se a letra não for encontrada retorna -1
+        var texto=document.getElementById('txt').innerHTML
+
+        var res=texto.indexOf('J')
+        document.write(res)
+        */
+
+
+
+
+        /* Retorna a ultima posição da letra digitada
+        var texto=document.getElementById('txt').innerHTML
+
+        var res=texto.lastIndexOf('s')
+        document.write(res)
+        */
+
+
+
+        /* Compara duas strings
+
+        var texto=document.getElementById('txt').innerHTML
+        var texto2=texto
+
+        // 0 = as strings são iguais 
+        // -1 = são diferentes
+
+        var res=texto.localeCompare(texto2)
+        if(res==0){
+            document.write('São iguais')
+        }else{
+            document.write('São diferentes')
+        }
+        */
+
+
+
+
+        /* Corta de acordo com as posições digitadas
+        var texto=document.getElementById('txt').innerHTML
+
+        var res=texto.slice (9,19)
+        document.write(res)
+        */
+
+
+
+
+        /*
+        var texto=document.getElementById('txt').innerHTML
+
+        var res=texto.split(" ")
+        document.write(res[4])
+        */
+
+
+
+        /* Corta de acordo com a posição digitada e  o tamanho
+        var texto=document.getElementById('txt').innerHTML
+
+        var res=texto.substring(0,5)
+        document.write(res)
+        */
+        
+
+
+        /*
+        var texto=document.getElementById('txt').innerHTML
+
+        //deixa tudo minúsculo var res=texto.toLowerCase()
+        //DEIXA TUDO MAIÚSCULO var res=texto.toUpperCase()
+        document.write(res)
+        */
+
+        /*
+        var num=15
+        var res=num.toString() // converte para string
+        var bin=num.toString(2)// converte para base binaria
+        var oct=num.toString(8)// converte para base octal
+        var hex=num.toString(16)// converte para base hexadecimal
+
+        document.write(res+'<br>')
+        document.write(bin+'<br>')
+        document.write(oct+'<br>')
+        document.write(hex+'<br>')
+        */
+
+        /* Tira os espaços do inicio e do fim
+        var texto='   Curso de JavaScript  '
+        var res=texto.trim()
+        alert(res)
+        document.write(res)
+        */
+    </script>
+</body>
+</html>

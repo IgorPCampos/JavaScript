@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location</title>
+    <script>
+        //O assign não remove a URL do histórico
+        //location.assign('p2.html')
+        //O replace remove a URL do histórico
+        //location.replace('https://www.youtube.com/watch?v=V27U8wfkik4&list=PLx4x_zx8csUj3IbPQ4_X5jis_SkCol3eC&index=69')
+        //Recarregar a página
+        function p2(){
+            //O replace remove a URL do histórico
+        location.replace('p2.html')
+        
+        }
+        function rec(){
+            location.reload()
+        }
+    </script>
+</head>
+<body>
+    <h1>Objeto location</h1>
+    <button id="btnP2" onclick="p2()">Página 2</button>
+    <button id="btnReload" onclick="rec()">Recarregar</button>
+</body>
+</html>
