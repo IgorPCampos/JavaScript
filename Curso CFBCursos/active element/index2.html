@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>active element</title>
+    <script>
+        function ativo(){
+           let cx=document.getElementById('selecionado')
+           let elemento=document.activeElement
+           let selecao=elemento.value.substring(elemento.selectionStart,elemento.selectionEnd)
+           cx.innerHTML=selecao
+
+        }
+
+        function inicia(){
+            let texto=document.getElementById('original')
+            texto.addEventListener('mouseup',ativo)
+        }
+
+        window.addEventListener('load',inicia)
+    </script>
+</head>
+<body>
+    
+    
+    <textarea rows="5" cols="20" id="original">Curso de JS</textarea>
+    Texto Selecionado: <span id="selecionado"></span>
+
+</body>
+</html>

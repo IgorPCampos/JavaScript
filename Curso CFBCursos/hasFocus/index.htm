@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Has Focus</title>
+    <style>
+        #painel{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background-color: rgba(82, 78, 78, 0.752);
+            display: none;
+        }
+    </style>
+    <script>
+        setInterval(foco,0)
+
+        function foco(){
+            var res=document.getElementById('verificação')
+            let painel=document.getElementById('painel')
+            if(document.hasFocus()){
+                res.innerHTML='Sim,'
+                painel.style.display='none'
+            }else{
+                res.innerHTML='Não'
+                painel.style.display='block'
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div id="painel"></div>
+    <div id="msg"><span id="verificação"></span> está em foco </div>
+</body>
+</html>
