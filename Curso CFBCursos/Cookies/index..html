@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+    <script>
+        function criarCookie(nome,valor,expira){
+            let dtexpira = 'expires= Tue, 01 Jan 2115 12:00:00 UTC'
+            document.cookie= nome + '=' + valor + ';' + dtexpira
+        }
+        function lerCookie(nome){
+            let vnome = nome + '='
+            let ca = document.cookie.split(';')
+            for(let i=0;i<ca.length;i++){
+                let c = ca[i]
+                while(c.charAt(0)==' '){
+                    c = c.substring(1)
+                }
+                if(c.indexOf(vnome)==0) 
+                return c.substring(vnome.length,c.length)
+            }
+            return ''
+        }
+        function iniCookie(){
+            let username=lerCookie('username')
+            if(username!=''){
+                alert('Bem vindo novamente' + username)
+            }else{
+                username = prompt('Digite seu nome: ','')
+                if(username!= '' && username !=null){
+                    criarCookie('username',username,365)
+                }
+            }
+        }
+    </script>
+</head>
+<body onload="iniCookie()">
+    
+</body>
+</html>
